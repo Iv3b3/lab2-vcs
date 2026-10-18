@@ -13,7 +13,7 @@ namespace lab1
             errorMessage = string.Empty;
             if (string.IsNullOrWhiteSpace(data.Email) || !data.Email.Contains("@"))
             {
-                errorMessage = "Ошибка: Некорректный Email (должен содержать @).";
+                errorMessage = "Ошибка валидации Email из ветки А";
                 return false;
             }
             return true;
