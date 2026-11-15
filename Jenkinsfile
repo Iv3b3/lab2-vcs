@@ -53,9 +53,9 @@ pipeline {
             steps {
                 echo 'Сохранение артефакта...'
                 bat 'if not exist artifacts mkdir artifacts'
-                bat 'echo Build %BUILD_NUMBER%> artifacts\build.txt'
-                bat 'echo Project %PROJECT_NAME%>> artifacts\build.txt'
-                bat 'copy /Y bin\Release\lab1.exe artifacts\'
+                bat 'echo Build %BUILD_NUMBER%> artifacts\\build.txt'
+                bat 'echo Project %PROJECT_NAME%>> artifacts\\build.txt'
+                bat 'copy /Y bin\\Release\\lab1.exe artifacts\\'
                 archiveArtifacts artifacts: 'artifacts/**', allowEmptyArchive: true
             }
         }
